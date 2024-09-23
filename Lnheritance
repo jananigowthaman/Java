@@ -1,0 +1,148 @@
+//hierarchical inheritance
+
+//parent
+package HierarchyInheri;
+public class Parent {
+	public void empName() {
+		System.out.println("janani");
+
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+//child1
+package HierarchyInheri;
+public class Child1 extends Parent {
+	private void empId() {
+		System.out.println("e21cs021");
+	}
+	
+
+	public static void main(String[] args) {
+		
+		Child1 c1=new Child1();
+		c1.empId();
+		c1.empName();
+		
+
+	}
+
+}
+
+
+//child2
+package HierarchyInheri;
+
+public class Child2 extends Parent{
+	private void empSalary() {
+		System.out.println("200000");
+	}
+	public static void main(String[] args) {
+		
+		Child2 c2=new Child2();
+		c2.empSalary();
+		c2.empName();
+
+	}
+
+}
+
+//Multiple inheritance
+
+//Grand parent class
+package org.empp;
+public class Details {
+	
+	public void empName(String name) {
+		System.out.println("emp name: "+name);
+    }
+	public void empId(int id) {
+		System.out.println("emp id:"+id);
+
+	}
+
+	public static void main(String[] args) {
+		
+	}
+
+
+//parent class
+package org.empp;
+public class SalaryDetails extends Details{
+	public void empSalary(int salary) {
+		System.out.println("emp salary: "+salary);
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+
+//child class
+package org.empp;
+public class WorkShift extends SalaryDetails{
+	
+	private void nightShift() {
+		System.out.println("night");
+
+	}
+
+
+	public static void main(String[] args) 
+	{
+		WorkShift w=new WorkShift();
+		w.empId(10);
+		w.empName("vijitha");
+		w.empSalary(20000);
+		w.nightShift();
+
+	}
+}
+
+
+//single inheritance
+
+
+//parent class
+package SingleInheri;
+public class ParentClass {
+	public void stuName() {
+		System.out.println("janani");
+
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+//child class
+package SingleInheri;
+public class ChildClass extends ParentClass {
+	private void stuId() {
+		System.out.println("e21cs021");
+
+	}
+	public static void main(String[] args) {
+		
+		ChildClass cp=new ChildClass();
+		cp.stuId();
+		cp.stuName();
+	}
+
+}
+
+
+
+
+
